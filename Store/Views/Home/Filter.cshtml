@@ -1,0 +1,16 @@
+﻿@model IEnumerable<Store.Web.ViewModels.GadgetViewModel>
+@{
+    ViewBag.Title = "Filter";
+}
+
+<div class="container">
+    <div class="jumbotron">
+        @foreach (var item in Model) {
+            <div class="panel panel-heading">
+                @Html.Label(item.Name)
+            </div> 
+            @Html.Partial("Gadget", item)
+        }
+    </div>
+</div>
+
